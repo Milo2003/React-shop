@@ -3,7 +3,7 @@ import React, { useContext, useEffect } from 'react';
 import '../style/myOrder.scss';
 import arrow from '../assets/icons/flechita.svg';
 
-import { OrderItem } from '../components/OrderItem';
+import { OrderItem } from './OrderItem';
 import { AppContext } from '../context/AppContext';
 
 export const MyOrder = ({ handleToggleOrders }) => {
@@ -20,8 +20,8 @@ export const MyOrder = ({ handleToggleOrders }) => {
                 <p className='title'>My Order</p>
             </div>
             <div className='my-order-content'>
-                {shoppingCart.cart.map((item, index) => (
-                    <OrderItem product={item} key={index} />
+                {shoppingCart.cart.map((item) => (
+                    <OrderItem product={item} key={item.subId}/>
                 ))}
             </div>
             <div className="total-checkout">
