@@ -1,0 +1,9 @@
+.main-container {
+  margin-top: 30px;
+}
+.cards-container {
+  display: grid;
+  gap: 26px;
+  grid-template-columns: repeat(auto-fill, 240px);
+  place-content: center;
+}
